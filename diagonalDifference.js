@@ -14,3 +14,6 @@ const matrix = [
 ]
 const result = diagonalDifference(matrix)
 console.log(result)
+
+//This one was so challenging, specially at row: 6 where I had to iterate the second diagonal from back to the start [arr.length -i -1] subtracting 1 for each iteration
+
