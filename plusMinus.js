@@ -20,7 +20,7 @@ const plusMinus = arr=>{
     const negativeResult = negativeElemets / n
     const zerosResult = zeros / n
 
-    return positiveResult.toFixed(6)+"\n"+negativeResult.toFixed(6)+"\n"+zerosResult.toFixed(6)+"\n"    
+    return positiveResult.toFixed(6)+"\n"+negativeResult.toFixed(6)+"\n"+zerosResult.toFixed(6)   
 }
 const inputArray = [1,2,3,-1,-2,-3,0,0]
 const result = plusMinus(inputArray)
