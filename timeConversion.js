@@ -1,12 +1,15 @@
-const timeConversion = (s)=>{
-    const separa = s.split(":").map(Number)
-    let time = ""
-    if(separa[0] > 12){
-        time = separa[0] - 12+":"+separa[1]+":"+separa[2]
-    }else{
-        time = separa[0]+":"+separa[1]+":"+separa[2]
+function timeConversion(s) {
+    const AMPM = s.slice(-2);
+    let timeArr = s.slice(0, -2).split(":");
+    
+    if (AMPM === "AM" && timeArr[0] === "12") {
+        timeArr[0] = "00";
+    } else if (AMPM === "PM") {
+        timeArr[0] = (timeArr[0] === "12") ? "12" : String(Number(timeArr[0]) + 12);
     }
-    return time
+    
+    return timeArr.join(":");
 }
 
-console.log(timeConversion("7:30:16"))
+console.log(timeConversion("07:05:45PM"));
+
