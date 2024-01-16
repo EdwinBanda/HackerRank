@@ -7,13 +7,13 @@ const countApplesAndOranges = (s,t,a,b,apples,oranges)=>{
     const distOrangesToTree = oranges.map(orange => orange + b)
 
     distApplesToTree.map(apple =>{
-        if(apple >= s && apple <= t){
+        if(s >= apple <= t){
             applesOnSam++
         }
     })
     
     distOrangesToTree.map(orange =>{
-        if(orange >= s && orange <= t){
+        if(s >= orange <= t){
             orangesOnSam++
         }
     })
